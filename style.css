@@ -62,6 +62,7 @@ nav{
   position: absolute;
   right: -4px;
   height: 560px;
+  overflow: hidden;
 }
 
 .company-items{
