@@ -60,7 +60,7 @@ nav{
 }
 .header-image{
   position: absolute;
-  right: 0px;
+  right: -10px;
   height: 560px;
 }
 
