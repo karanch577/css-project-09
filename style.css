@@ -10,7 +10,6 @@
 
 body{
   background-color: #F8F8FA;
-  /* overflow-x: hidden; */
 
 }
 
@@ -336,21 +335,21 @@ nav{
   width: 100%;
   background-color:#E9EDFF;
   border-radius: 30px;
-  padding-left: 2.5em;
+  padding-left: 4%;
 }
 input::placeholder{
   color: #000;
   font-size: 1rem;
 }
 .download-email button{
-  padding: .9em 4em;
+  padding: .9em 10%;
   background-color: var(--clr-primary);
   color: #fff;
   border-radius: 30px;
   font-size: 1rem;
   border: none;
   position: absolute;
-  right: -35px;
+  right: -5%;
   top: 1px;
 
 }
@@ -360,6 +359,18 @@ input::placeholder{
 
   .download-section{
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width:460px) {
+  .download-email button{
+    right: 46%;
+    top: 3.8rem;
+  }
+
+  .download-section{
+    margin-top: -5rem;
+    padding: 1em 0;
   }
 }
 
