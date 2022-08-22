@@ -10,7 +10,7 @@
 
 body{
   background-color: #F8F8FA;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
 }
 
@@ -22,11 +22,14 @@ body{
 
 header{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   background-color: #4617FE;
+  position: relative;
+  justify-content: space-between;
 }
 
 nav{
+  
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -34,6 +37,9 @@ nav{
   margin: 1.5em 3em;
   font-size: .8rem;
   color: #fff;
+  position: absolute;
+  top: 2em;
+  right: 4%;
 }
 .nav-item{
   padding: .4em 1.3em;
@@ -45,26 +51,61 @@ nav{
   border-radius: 3px;
 }
 .logo{
-  position: relative;
-  bottom: 40px;
-  left: 55px;
+  position: absolute;
+  top: 40px;
+  left: 6.4%;
 }
 .header-text{
   color: #fff;
   font-size: 1.5em;
-  position: relative;
-  right: 70px;
+  /* position: relative; */
+  background-color: #566568;
+  /* right: 70px; */
   margin: 5em 0;
+  margin-left: -2%;
+  width: 40%;
+  margin-right: 2em;
 }
 .header-text p{
   font-size: 1rem;
 }
 .header-image{
-  position: absolute;
-  right: -4px;
-  height: 560px;
-  overflow: hidden;
+  position: relative;
+  top: 7em;
+  right: 110px;
+  width: 130%;
+  /* overflow: hidden; */
 }
+
+
+@media (max-width:690px) {
+  .nav-item{
+    display: none;
+  }
+}
+
+@media (max-width:1114px) {
+  .header-image{
+    margin: 0 auto;
+    left: 0;
+    width: 97%;
+  }
+  
+  
+  .header-text{
+    width: 100%;
+  }
+
+  header{
+    justify-content: center;
+  }
+  .header-text{
+    margin-left: 2em;
+  }
+}
+
+
+/* API section */
 
 .company-items{
   color: #000;
@@ -77,7 +118,7 @@ nav{
   margin: 2em 0;
 }
 
-/* API section */
+
 .api{
   width: 93%;
   margin: 5em auto;
@@ -117,24 +158,45 @@ nav{
 .card-body{
   font-size: .8rem;
 }
-.blog-right{
-  color: var(--clr-primary);
-  position: absolute;
-  right: 3em;
-  bottom: 25em;
+
+@media (max-width:760px) {
+  .card:last-child{
+    display: none;
+  }
+
+  .cards{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: green; */
+  }
+
+  .company-items{
+    margin: 3vw;
+  }
+
+
 }
 
 /* Blog Section */
 
 .blog-heading{
-  width: 93%;
-  margin: 1.5em auto;
+  margin: 1.5em;
 }
 
+.blog-right{
+  color: var(--clr-primary);
+  position: absolute;
+  top: -5rem;
+  right: 3rem;
+  
+}
 .blog-cards{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
+  gap: 5%;
+  margin: 0 4%;
 }
 .blog-card{
   position: relative;
@@ -142,27 +204,58 @@ nav{
   justify-content: space-between;
   background-color: #fff;
   border-radius: 10px;
+  width: 100%;
+  align-items: center;
+  gap: 3em;
 }
+
+.blog-image{
+  width: 100%;
+  align-self: flex-start;
+}
+
 .blog-content{
-  padding: 3em 1em;
-  margin: 0 3.6em;
+  width: 140%;
+  margin-left: 2em;
+  margin-bottom: 4.5em;
 }
-.blog-bottom{
-  position: absolute;
-  top: 305px;
-  left: 330px;
-}
+
 .blog-author{
   position: absolute;
-  top: 154px;
-  left: 199px;
-  width: 200px;
+  right: 1em;
+  bottom: 1em;
+  width: 8rem;
+}
+
+.blog-bottom{
+  position: absolute;
+  bottom: .5rem;
+  right: 10.7rem;
 }
 
 .blog-image img{
-  object-fit: cover;
-  width: 120%;
-} 
+  width: 130%;
+}
+
+@media (max-width:900px) {
+  .blog-cards{
+    flex-wrap: wrap;
+    
+  }
+
+  .blog-image img{
+    width: 77%;
+  }
+
+  .blog-content{
+    width: 100%;
+    margin-left: -5em;
+  }
+  .blog-card{
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+}
 
 /* FAQ Section */
 .faq-section{
@@ -207,6 +300,15 @@ nav{
   margin-top: 1em;
 }
 
+@media (max-width:850px) {
+  .faq-section{
+    flex-direction: column;
+  }
+  .faq-content{
+    margin-left: 1.5em;
+  }
+}
+
 /* Download Section */
 .download-section{
   display: flex;
@@ -219,10 +321,19 @@ nav{
   font-weight: 100;
 }
 
+.download-content{
+  width: 100%;
+}
+
+.download-email{
+  width: 100%;
+  position: relative;
+  margin-right: 1em;
+}
 
 .download-email input{
   height: 50px;
-  width: 500px;
+  width: 100%;
   background-color:#E9EDFF;
   border-radius: 30px;
   padding-left: 2.5em;
@@ -238,10 +349,18 @@ input::placeholder{
   border-radius: 30px;
   font-size: 1rem;
   border: none;
-  position: relative;
-  right: 50px;
+  position: absolute;
+  right: -35px;
   top: 1px;
 
+}
+
+@media (max-width:930px) {
+  
+
+  .download-section{
+    flex-wrap: wrap;
+  }
 }
 
 /* footer section */
@@ -289,4 +408,16 @@ input::placeholder{
 }
 .no-border{
   border: none;
+}
+
+
+@media (max-width:710px){
+  .list{
+    display: none;
+  }
+  .footer-logo,
+  .footer-logos{
+    max-width: 100%;
+  }
+
 }
