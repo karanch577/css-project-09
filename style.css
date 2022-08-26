@@ -58,9 +58,6 @@ nav{
 .header-text{
   color: #fff;
   font-size: 1.5em;
-  /* position: relative; */
-  background-color: #566568;
-  /* right: 70px; */
   margin: 5em 0;
   margin-left: -2%;
   width: 40%;
@@ -183,7 +180,6 @@ nav{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    /* background-color: green; */
   }
 
   .company-items{

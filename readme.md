@@ -11,7 +11,7 @@
     - last-of-type selector
 
 ## Time taken to complete this project
-    - 8 hours
+    - 8 hours + 3 hours (responsiveness)
 
 ## Screenshot
 ![image](project9.png)
